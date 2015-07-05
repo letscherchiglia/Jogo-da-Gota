@@ -1,0 +1,12 @@
+Algumas observações sobre o arquivo Fusion
+
+* O arquivo terminado em .001 é um backup automático: sempre que uma versão é salva, a antiga é gravada com a extensão ".001". Caso seja preciso, basta renomear para ".mfa" e abrir.
+
+* Nos estágios de jogo, prefeti deixar a água sem animação para deixar o nível mais "leve". Nesse caso, usei um objeto do tipo "quick backdrop", que funciona bem para tiles. Nas propriedades do objeto, basta escolher o modo "motif" que o editor de imagens fica disponível, sendo possível importar um gráfico. O quick backdrop funciona como o backdrop comum e pode ser usado como obstáculo. IMPORTANTE: nunca usar o quick backdrop no modo gradiente - ele fica muito lento.
+
+* Transparência: para objetos que não têm transparência (active, backdrop ou quick), é importante procurar nas propriedades por "transparência" e desmarcar. Isso ajuda bastante na performance. Além disso, caso a imagem não esteja usando canal alpha, procure, no editor de imagens, pelo botão com ícone "alpha" e mude o modo de "alpha channel" para "transp. color".
+
+* Fine detection: em objetos do tipo "active" é possível determinar como a colisão é detectada. Por padrão a propriedade "fine detection" vem marcada, mas caso não seja preciso ter precisão na detecção (como no caso do objeto active ser usado como decoração), desmarcar esta opção ajuda na performance.
+
+* Objetos globais: nas propriedades "runtime" da maioria dos objetos há a opção "global object" que vem desmarcada por padrão. Caso seja marcada, o objeto passa a ser global em todos os níveis do editor. Com isso, basta arrastá-lo de um frame para outro em que queira posicioná-lo. Com isso, sempre que o objeto for editado em um frame (não importa qual), todas as ocorrências dele no projeto são atualizadas automaticamente. No caso do jogo da gota, vários objstos estão assim para simplificar mudanças no futuro.
+
